@@ -1,0 +1,29 @@
+<div *ngIf="!logging">
+  <app-login></app-login>
+</div>
+<div *ngIf="logging">
+<div class="container">
+    <div class="text-center">
+      <h4 class="text-info">Xin chào <span style="color:red">{{emailName}}</span></h4>
+     <a routerLink="../wellcome"> <button class="btn btn-warning">Books Manage</button></a>
+    </div>
+  <h2>
+    Chat Messages</h2>
+
+  <div class="container chat-folow">
+    <div *ngFor="let i of messages.reverse()">
+      <hr>
+    <p class="user"> <strong>{{i.userEmail}} :</strong> </p>
+    <p class="content">{{i.content}}</p>
+    <span class="time-right">{{i.time | date:"MM/dd:HH:mm"}}</span>
+    <button class="btn btn-danger" (click)="deleteMesage(i)" >Delete</button>
+  </div>
+  </div>
+  <form ((ngSubmit) = "addMessage(content)">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Send Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #content></textarea>
+  </div>
+  <button class="btn btn-danger" (click)="addMessage(content)">Send..</button>
+</form>
+</div>

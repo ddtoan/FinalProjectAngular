@@ -1,0 +1,10 @@
+.not-found {
+    background-color:red;
+    width: 1920px;
+}
+.not-found h1 {
+    text-align: center;
+}
+img {
+    margin: auto;
+}

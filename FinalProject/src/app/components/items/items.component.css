@@ -1,0 +1,26 @@
+
+
+.name{
+    color: rgb(250, 188, 118)
+}
+.title {
+    color: rgb(97, 79, 56)
+}
+.id {
+    color: aqua
+}
+button {
+    float: right ;
+}
+.item-folow {
+    max-height: 450px;
+    overflow-y: scroll;
+    border-top: 1px solid lightcoral ;
+    border-bottom: 1px solid lightcoral ;
+}
+.clear1 {
+    clear: both;
+}
+.titleList {
+    text-align: left;
+}

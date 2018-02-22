@@ -1,0 +1,13 @@
+.time {
+    font-size: 30% 
+}
+.user {
+    color:rgb(255, 136, 0) ;
+}
+.content {
+    color: lightcoral ;
+}
+.chat-folow {
+    max-height: 450px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="form">
+      
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input class="form-control" type="text" [(ngModel)]="email" name="something" placeholder="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input class="form-control" type="password" [(ngModel)]="password" name="something2" placeholder="email">
+        </div>
+        <a routerLink="../wellcome">
+          <button type="submit" (click)="login()" class="btn btn-primary">
+            Login</button>
+        </a>
+        <br>
+        <br>
+        <button type="submit" (click)="signUp()" class="btn btn-warning">SignUp</button>
+      </form>
+        <br>
+  </div>
+</div>

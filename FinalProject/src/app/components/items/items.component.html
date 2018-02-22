@@ -1,0 +1,47 @@
+
+<div class="container clear1">
+  <app-add-item></app-add-item> 
+  
+  <div class="container">
+    <h2 class="titleList">List Book of <span style="color: red">{{userNameCompact}}</span></h2>
+    <div class="container item-folow">
+    <ul class="list-group" *ngFor="let i of items.reverse() ">
+      <li *ngIf="i.user === userName"  class="list-group-item">
+        <strong><span class="name">{{i.nameBook}}(
+        <span style="color: aqua"> {{i.id}} </span>) :</span></strong> <br> <span class="title">{{i.title}}</span>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#editModal" (click)="onSelected(i)">Edit Book</button>
+        <button class="btn btn-danger" (click)="onDelete(i)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  </div>  <div class="modal fade" id="editModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Book</h4>
+          <button type="button" class="close"  data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form  (ngSubmit) = "onEdit(editBookName,editBookDescription)">
+                <div class="form-group">
+                  <label for="usr">Name:</label>
+                  <input type="text" class="form-control" value="{{bookName}}" #editBookName>
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Description:</label>
+                  <input type="text" class="form-control" value="{{bookDescription}}" #editBookDescription>
+                </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="btn btn-primary edit" type="submit" (click) = "onEdit(editBookName,editBookDescription)" data-dismiss="modal" style="float:left ;">Edit</button>
+        </div>
+        
+      </form>
+    </div>
+      </div>
+</div>
